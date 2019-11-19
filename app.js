@@ -1,29 +1,16 @@
 const express = require("express");
-const url = require("url");
-
 const app = express();
 
-let param = [
-    {
-        "name" : "윤무경" ,
-        "HP"   : "010-9501-9306"
-    }
-];
+app.set("views", "./views");
+app.set("view engine", "ejs");
 
 //서버 Start
 app.get("/", (req, res) => {
-    console.log(url.URL);
+    res.render("login", {});
 });
 
-app.post("/post/test", (req, res) => {
-    let ex = {
-            "name" : "push" ,
-            "HP"   : "010-1234-5678"
-    };
-    param.push(ex);
-    console.log(param);
-    res.send(param);
-});
+app.use("/css", express.static("css"));
+app.use("/js", express.static("js"));
 
 var server = app.listen(3000, () => {
     console.log("server start!!");
