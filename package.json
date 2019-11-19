@@ -1,0 +1,14 @@
+{
+  "name": "startnode",
+  "version": "1.0.0",
+  "description": "node시작",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "YMK",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
